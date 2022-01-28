@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Kontaktformular{% endblock %}
+{% block content %}
+
+{% for message in 
+get_flashed_messages () %}
+
+    <div class="alert alert-warning
+    alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+{% endfor %}
+
+{% if name %}
+    <p>Wenn Sie weitere Anfragen stellen möchten, gelangen Sie <a href="http://127.0.0.1:5000/">hier</a> wieder auf unser Kontaktformular.<br>
+        Möchten Sie weitere Services von ZB MED entdecken klicken sie <a href="http://zbmed.de">hier</a>.
+
+{% else %}
+    <h1>Kontaktformular</h1><br>
+    <P>Das Kontakformular wurde entwickelt um den Bedarf an wissenschaftlichen Zeitschriften entgegenzukommen.
+        Bibliotheken, Endnutzer und Wissenschaftler*innen bekommen dadurch die Möglichkeit auf Wunsch Zeitschriften anzufragen.</P>
+        <p><a href="http://ezb.uni-regensburg.de/ezeit/search.phtml?bibid=ZBMED&colors=7&lang=de">Hier</a> gelangen Sie auf unsere 
+            Nutzeroberfläche der Elektronischen Zeitschriftenbiblothek, um in unserem aktuellen Bestand zu recherchieren.</p>
+        <p>Benötigen Sie eine Zeitschrift, die nicht von der ZB MED lizenziert worden ist, dann füllen Sie gerne unser Kontaktformular aus!</P>
+    
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <h4>Persönliche Daten</h4>
+        {{ form.name.label(class="form-label") }}
+
+        {{ form.name(class="form-control") }}
+        <br>
+        {{ form.library.label(class="form-label") }}
+
+        {{ form.library(class="form-control") }}
+        <br>
+        {{ form.email.label(class="form-label") }}
+
+        {{ form.email(class="form-control") }}
+        <br>
+        <h4>Wunschtitel</h4>
+        {{ form.online.label(class="form-label") }}
+
+        {{ form.online(class="form-control") }}
+        <br>
+        {{ form.print.label(class="form-label") }}
+
+        {{ form.print(class="form-control") }}
+        <br>
+        {{ form.message.label(class="form-label") }} <small>z.B. zu Titel, Begründung </small>
+
+        {{ form.message(class="form-control") }}
+        <br>
+        {{ form.submit(class="btn btn-secondary") }}
+
+    </form>
+
+</div>
+<br><br><br>
+ 
+
+{% endif %}
+
+
+
+{% endblock %}
