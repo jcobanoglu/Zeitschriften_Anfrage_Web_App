@@ -4,7 +4,7 @@
 
 
 ## Dokumentation 
-Vorliegende Arbeit ist in Python Flask. Alles zu FLak finden Sie [hier](https://flask.palletsprojects.com/en/1.1.x/).
+Vorliegende Arbeit ist in Python Flask. Alles zu Flask finden Sie [hier](https://flask.palletsprojects.com/en/1.1.x/).
 
 ## Lizenz
 [MIT-License](https://en.wikipedia.org/wiki/MIT_License) 
