@@ -33,7 +33,7 @@ class Users(db.Model):
 class UserForm(FlaskForm):
     name = StringField("Name", [validators.DataRequired()])
     library = StringField("Einrichtung/Bibliothek", [validators.DataRequired()])
-    email = StringField("Email", [validators.DataRequired()])
+    email = StringField("E-Mail", [validators.DataRequired()])
     online = StringField("Online ISSN", [validators.optional(), validators.length(max=9)])
     print = StringField("Print ISSN", [validators.optional(), validators.length(max=9)])
     message = TextAreaField("Anmerkung zur Zeitschrift", [validators.optional(), validators.length(max=300)])
