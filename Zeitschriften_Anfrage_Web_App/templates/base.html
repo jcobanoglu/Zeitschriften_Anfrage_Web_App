@@ -9,19 +9,17 @@
 </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-md"> 
-                <a href=https://www.zbmed.de><img src="{{ url_for('static', filename='LOGO.jpg')}}" height="100" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-fluid"> 
+                <a class="navbar-brand" href=https://www.zbmed.de><img src="{{ url_for('static', filename='LOGO.jpg')}}" height="200" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button> 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a aria-current="page" type="button" class="btn btn-danger" href="/">Kontaktformular</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/aktuelles">Aktuelle Anfragen</a></li>
-                        
-                        
-                    </div>
-                
+                </button>                             
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a class="btn btn-danger" href="/">Kontaktformular</a>
+                        <a class="btn btn-light" href="/aktuelles">Aktuelle Anfragen</a>
+                    </div> 
+                </div>
         </nav>
         
         <div class="container-md">
