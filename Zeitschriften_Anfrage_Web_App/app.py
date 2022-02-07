@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime 
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField, validators
-from wtforms.validators import optional, DataRequired
+
 
 # create a flask instance 
 app = Flask(__name__)
