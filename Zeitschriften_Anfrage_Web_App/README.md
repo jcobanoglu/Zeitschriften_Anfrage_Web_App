@@ -2,7 +2,7 @@
 
 ## Inhalt
 Den Nutzerinnen und Nutzern der Deutschen Zentralbibliothek für Medizin (ZB MED) soll zukünftig ermöglicht werden, ihren Bedarf präziser zu äußern. Dafür benötigt das Informationszentrum Lebenswissenschaften ein technisches System, das als Kommunikationstool fungieren soll.<br>
-In der vorliegenden Arbeit wird für die Bedarfsermittlung von wissenschaftlichen Zeitschriften ein Web-Service erstellt. Mit der Programmiersprache Python Flask wurde eine Webapplikation entwickelt, die den Bedarf mittels eines Kontaktformu-lars erfasst. Zudem können andere Nutzerinnen und Nutzer sehen, welche Zeitschriften bereits angefragt wurden. Für eine Übersichtlichkeit der Anfragen wird in dem Kontaktformular zwischen print und online International Standard Serial Numbers (ISSN) unterschieden. Nach dem Versenden der Anfrage ist die ISSN-Nummer für andere Nutzerinnen und Nutzer sichtbar, damit doppelte Anfragen vermieden werden.
+In der vorliegenden Arbeit wird für die Bedarfsermittlung von wissenschaftlichen Zeitschriften ein Web-Service erstellt. Mit der Programmiersprache Python Flask wurde eine Webapplikation entwickelt, die den Bedarf mittels eines Kontaktformulars erfasst. Zudem können andere Nutzerinnen und Nutzer sehen, welche Zeitschriften bereits angefragt wurden. Für eine Übersichtlichkeit der Anfragen wird in dem Kontaktformular zwischen print und online International Standard Serial Numbers (ISSN) unterschieden. Nach dem Versenden der Anfrage ist die ISSN-Nummer für andere Nutzerinnen und Nutzer sichtbar, damit doppelte Anfragen vermieden werden.
 
 
 ## Dokumentation 
