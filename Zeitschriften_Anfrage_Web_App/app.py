@@ -17,12 +17,12 @@ db = SQLAlchemy(app)
 # create model 
 class Users(db.Model): 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(200), nullable=False)
-    library = db.Column(db.String(200), nullable=False)
-    email = db.Column(db.String(200), nullable=False, unique=True) #unique  = one person/one mail 
-    online = db.Column(db.String(200), nullable=False)
-    print = db.Column(db.String(200), nullable=False)
-    message = db.Column(db.String(200), nullable=False)
+    name = db.Column(db.String(150), nullable=False)
+    library = db.Column(db.String(150), nullable=False)
+    email = db.Column(db.String(150), nullable=False, unique=True) #unique  = one person/one mail 
+    online = db.Column(db.String(9), nullable=False)
+    print = db.Column(db.String(9), nullable=False)
+    message = db.Column(db.String(150), nullable=False)
     date_added = db.Column(db.DateTime, default=datetime.utcnow)
     
     # create a string
@@ -31,9 +31,9 @@ class Users(db.Model):
 
 # create a form class 
 class UserForm(FlaskForm):
-    name = StringField("Name", [validators.DataRequired()])
-    library = StringField("Einrichtung/Bibliothek", [validators.DataRequired()])
-    email = StringField("E-Mail", [validators.DataRequired()])
+    name = StringField("Name*", [validators.DataRequired()])
+    library = StringField("Einrichtung/Bibliothek*", [validators.DataRequired()])
+    email = StringField("E-Mail*", [validators.DataRequired()])
     online = StringField("Online ISSN", [validators.optional(), validators.length(max=9)])
     print = StringField("Print ISSN", [validators.optional(), validators.length(max=9)])
     message = TextAreaField("Anmerkung zur Zeitschrift", [validators.optional(), validators.length(max=300)])
@@ -41,7 +41,7 @@ class UserForm(FlaskForm):
 
 
 @app.route("/", methods=['GET','POST'])
-def add():
+def formular():
     name = None 
     form = UserForm()
     if form.validate_on_submit():
@@ -59,11 +59,9 @@ def add():
         form.print.data = ''
         form.message.data = ''
         flash('Vielen Dank! Ihre Anfrage war efolgreich!')
-    our_users = Users.query.order_by(Users.date_added)
-    return render_template("formular.html",
-        form=form, 
+    return render_template("formular.html", 
         name=name,
-        our_users=our_users)
+        form=form)
     
 @app.route("/aktuelles")
 def aktuelles():
@@ -71,8 +69,8 @@ def aktuelles():
     form = UserForm()            
     our_users = Users.query.order_by(Users.date_added)
     return render_template("aktuelles.html",
-        form=form, 
         name=name,
+        form=form, 
         our_users=our_users)
 
 

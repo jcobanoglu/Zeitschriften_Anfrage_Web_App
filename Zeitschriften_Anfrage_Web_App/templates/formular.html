@@ -19,7 +19,7 @@ get_flashed_messages () %}
 
 {% else %}
     <h1>Kontaktformular</h1><br>
-    <P>Das Kontakformular wurde entwickelt, um den Bedarf an wissenschaftlichen Zeitschriften entgegenzukommen.
+    <P>Das Kontaktformular wurde entwickelt, um den Bedarf an wissenschaftlichen Zeitschriften entgegenzukommen.
         Bibliotheken, Endnutzer und Wissenschaftler*innen bekommen dadurch die Möglichkeit auf Wunsch Zeitschriften anzufragen.</P>
         <p><a href="http://ezb.uni-regensburg.de/ezeit/search.phtml?bibid=ZBMED&colors=7&lang=de">Hier</a> gelangen Sie auf unsere 
             Nutzeroberfläche der Elektronischen Zeitschriftenbibliothek, um in unserem aktuellen Bestand zu recherchieren.</p>
@@ -42,17 +42,19 @@ get_flashed_messages () %}
         {{ form.email(class="form-control") }}
         <br>
         <h4>Wunschtitel</h4>
-        {{ form.online.label(class="form-label") }}
+        {{ form.online.label(class="form-label") }} <small>xxxx-xxxx</small>
 
         {{ form.online(class="form-control") }}
         <br>
-        {{ form.print.label(class="form-label") }}
+        {{ form.print.label(class="form-label") }} <small>xxxx-xxxx</small>
 
         {{ form.print(class="form-control") }}
         <br>
         {{ form.message.label(class="form-label") }} <small>z.B. zu Titel, Begründung </small>
-
+        
         {{ form.message(class="form-control") }}
+        <br>
+        <p> Mit * markierte Felder sind Pflichtfelder</p>
         <br>
         {{ form.submit(class="btn btn-secondary") }}
 
